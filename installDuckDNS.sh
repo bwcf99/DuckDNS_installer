@@ -16,9 +16,10 @@ echo "..."
 echo "Did you remember to Elevate to root and cd ~? (y/n)"
 read isRoot
 
-if ["$isroot" = "y"]; then
+if [ "$isroot" = "y" ]; then
   echo "Great! onward!"
 else
+  echo "Elevate to root and (~) (sudo -i) and try again!"
   exit 130
 fi
 
@@ -62,11 +63,12 @@ echo "Installation complete!"
 echo "."
 echo ".."
 echo "..."
-echo "Do you want to delete the install script?"
+echo "Do you want to delete the install script? (y/n)"
 read answer
-if ["$answer" = 'n']
+if [ "$answer" = 'n' ]
 then
-  exit 130
+  echo "Will do! Install complete"
+  exit 1
 else
   rm -rf ~/installDuckDNS.sh
   echo "DuckDNS installed and the installer has been removed!"
