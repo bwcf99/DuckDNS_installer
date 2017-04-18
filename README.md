@@ -6,7 +6,7 @@ Raspberry Pi installer for DuckDNS
 Raw download link "https://raw.githubusercontent.com/bwcf99/DuckDNS_installer/master/installDuckDNS.sh"
 
 
-##Quick command
-> sudo -i
-> wget https://raw.githubusercontent.com/bwcf99/DuckDNS_installer/master/installDuckDNS.sh
-> chmod 700 installDuckDNS.sh
+## Quick command
+sudo -i
+wget https://raw.githubusercontent.com/bwcf99/DuckDNS_installer/master/installDuckDNS.sh
+chmod 700 installDuckDNS.sh
