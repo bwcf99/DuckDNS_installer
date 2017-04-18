@@ -12,3 +12,5 @@ sudo -i
 wget https://raw.githubusercontent.com/bwcf99/DuckDNS_installer/master/installDuckDNS.sh
 
 chmod 700 installDuckDNS.sh
+
+./installDuckDNS.sh
