@@ -4,12 +4,25 @@
 # 4/17/2017
 # VT
 
-# ¡¡Elevate to root and ~ before running!! ("sudo -i")
+######## Elevate to root and ~ before running!! ("sudo -i") ########
 
 echo "Beginning DuckDNS install"
 echo "."
 echo ".."
 echo "..."
+
+
+#Check if root
+echo "Did you remember to Elevate to root and cd ~? (y/n)"
+read isRoot
+
+if ["$isroot" = "y"]; then
+  echo "Great! onward!"
+else
+  exit 130
+fi
+
+#Catch variables
 echo "What's your DuckDNS token?"
 read token
 
@@ -32,16 +45,16 @@ echo "rm -rf ~/duckdns/duck.log" >> duckdns/clearDuckLog.sh
 
 echo $fullCommand >> duckdns/duck.sh
 
-#Create CronTab Entry
+#Create CronTab Entrys
 touch /etc/cron.d/duckdns
 
-crontab="*/5 * * * * root ~/duckdns/duck.sh >/dev/null 2>&1"
+crontab="*/5 * * * * root ~/duckdns/duck.sh >/dev/null 2>&1" #GET every 5 min
 crontab2="0 0 1 * * root ~/duckdns/clearDuckLog.sh >/dev/null 2>&1" #delete logs once a month
 
 echo "$crontab" >> /etc/cron.d/duckdns
 echo "$crontab2" >> /etc/cron.d/duckdns
 
-
+#Complete!
 echo "."
 echo ".."
 echo "..."
