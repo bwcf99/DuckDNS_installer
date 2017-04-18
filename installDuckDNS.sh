@@ -41,7 +41,8 @@ echo "$crontab2" >> /etc/cron.d/duckdns
 echo "Installation complete!"
 echo "did you remember to edit the script config first? (y/n) - y will delete install Script"
 read answer
-if ["$answer" = "n"]; then
+if ["$answer" = "n"]
+then
   exit 130
 else
   rm -rf ~/installDuckDNS.sh
