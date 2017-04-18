@@ -7,8 +7,8 @@
 # ¡¡Elevate to root and ~ before running!! ("sudo -i")
 
 #CONFIG#
-token="ce251e11-e710-416c-a931-962bc9a80dfa"
-domain="vaag"
+token=""
+domain=""
 ########
 
 echo "Beginning DuckDNS install"
