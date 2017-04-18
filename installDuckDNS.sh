@@ -7,11 +7,17 @@
 # ¡¡Elevate to root and ~ before running!! ("sudo -i")
 
 #CONFIG#
-token=""
-domain=""
+#token=""
+#domain=""
 ########
 
 echo "Beginning DuckDNS install"
+
+echo "What's your DuckDNS token?"
+read token
+
+echo "and the domain?"
+read domain
 
 #Create DuckDNS directory/Duck.sh
 mkdir duckdns
