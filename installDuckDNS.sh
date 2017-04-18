@@ -30,13 +30,13 @@ echo "rm -rf ~/duckdns/duck.log" >> duckdns/clearDuckLog.sh
 echo $fullCommand >> duckdns/duck.sh
 
 #Create CronTab Entry
-touch /etc/cron.d/duckdns.cron
+touch /etc/cron.d/duckdns
 
 crontab="*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1"
 crontab2="0 0 1 * * ~/duckdns/clearDuckLog.sh >/dev/null 2>&1" #delete logs once a month
 
-echo "$crontab" >> /etc/cron.d/duckdns.cron
-echo "$crontab2" >> /etc/cron.d/duckdns.cron
+echo "$crontab" >> /etc/cron.d/duckdns
+echo "$crontab2" >> /etc/cron.d/duckdns
 
 echo "Installation complete!"
 echo "did you remember to edit the script config first? (y/n)\ny will delete installScript"
