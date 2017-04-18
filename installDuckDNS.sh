@@ -6,13 +6,10 @@
 
 # ¡¡Elevate to root and ~ before running!! ("sudo -i")
 
-#CONFIG#
-#token=""
-#domain=""
-########
-
 echo "Beginning DuckDNS install"
-
+echo "."
+echo ".."
+echo "..."
 echo "What's your DuckDNS token?"
 read token
 
@@ -44,8 +41,14 @@ crontab2="0 0 1 * * root ~/duckdns/clearDuckLog.sh >/dev/null 2>&1" #delete logs
 echo "$crontab" >> /etc/cron.d/duckdns
 echo "$crontab2" >> /etc/cron.d/duckdns
 
+
+echo "."
+echo ".."
+echo "..."
 echo "Installation complete!"
-echo ""
+echo "."
+echo ".."
+echo "..."
 echo "Do you want to delete the install script?"
 read answer
 if ["$answer" = 'n']
