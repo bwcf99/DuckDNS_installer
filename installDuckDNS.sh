@@ -38,8 +38,8 @@ echo $fullCommand >> duckdns/duck.sh
 #Create CronTab Entry
 touch /etc/cron.d/duckdns
 
-crontab="*/5 * * * * ~/duckdns/duck.sh >/dev/null 2>&1"
-crontab2="0 0 1 * * ~/duckdns/clearDuckLog.sh >/dev/null 2>&1" #delete logs once a month
+crontab="*/5 * * * * root ~/duckdns/duck.sh >/dev/null 2>&1"
+crontab2="0 0 1 * * root ~/duckdns/clearDuckLog.sh >/dev/null 2>&1" #delete logs once a month
 
 echo "$crontab" >> /etc/cron.d/duckdns
 echo "$crontab2" >> /etc/cron.d/duckdns
